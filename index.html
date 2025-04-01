@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Scaling Laws for Diffusion Transformers</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="stylesheet" href="./src/original/dics.original.css">
+  <script src="./src/original/dics.original.js"></script>
+
+      <script>
+
+        document.addEventListener('DOMContentLoaded', domReady);
+
+        function domReady() {
+            new Dics({
+                container: document.querySelectorAll('.b-dics')[0],
+                textPosition: 'top'
+            });
+
+            new Dics({
+                container: document.querySelectorAll('.b-dics')[1],
+                hideTexts: true,
+                textPosition: 'center'
+            });
+
+            new Dics({
+                container: document.querySelectorAll('.b-dics')[2]
+            });
+
+            new Dics({
+                container: document.querySelectorAll('.b-dics')[3],
+                linesOrientation: 'vertical',
+                textPosition: 'left',
+                arrayBackgroundColorText: ['#000000', '#FFFFFF'],
+                arrayColorText: ['#FFFFFF', '#000000'],
+                linesColor: 'rgb(0,0,0)'
+            });
+
+            new Dics({
+                container: document.querySelectorAll('.b-dics')[4],
+                linesOrientation: 'vertical',
+                textPosition: 'right'
+            });
+
+            new Dics({
+                container: document.querySelectorAll('.b-dics')[5],
+                textPosition: 'bottom'
+            });
+
+            new Dics({
+                container: document.querySelectorAll('.b-dics')[6],
+                filters: ['blur(3px)', 'grayscale(1)', 'sepia(1)', 'saturate(3)']
+            });
+            new Dics({
+                container: document.querySelectorAll('.b-dics')[7],
+                rotate: '45deg'
+            });
+
+        }
+    </script>
+  
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h3 class="title is-3 publication-title">Scaling Laws for Diffusion Transformers</h3>
+
+          
+          <h4 class="title is-4">ICML 2025 Submission 3981 Rebuttal Link</h4> 
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <p>Anonymous Author</p></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+<section class="section">
+  <div class="column is-full-width">
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experimental Results</h2>
+        <div class="content has-text-justified">
+        
+
+          <h3 class="title is-4">Exp. A: ImageNet with Flux VAE</h3>
+        <div class="content has-text-justified">
+          
+          
+          <div align="center"><img src="./static/images/imagenet.png" alt="" width=90% /></span></div>
+        </div>
+        <p>Caption: Scaling curves for Diffusion Transformers on ImageNet with Flux VAE. In the first figure, experiments are conducted across a wide range of compute budgets. We fit a parabola
+          for each budgets and find the optimal parameters (lowest point). In the Figure 2-4, we plot the relationship between the optimal model under each compute budget and its pameters, loss, and FID.  </p>
+        </div>
+                
+        <h3 class="title is-4" align="left">Exp. B: Effect of CFG Scale</h3>
+        <div class="content has-text-justified">
+          <div align="center"><img src="./static/images/cfg_fid.png" alt="" width=90% /></span></div>
+          <p>
+            Caption: We test the compute-optimal models with different CFG Scale (0.0, 2.5, 5.0). The CFG affects the slope of the curve and cause a vertical shift. However, CFG Scale will not
+            affect the existence of scaling laws.
+          </p>        
+        </div>
+
+        <h3 class="title is-4" align="left">Exp. C: Transferability on more text-2-image dataset</h3>
+        <div class="content has-text-justified">
+          <div align="center"><img src="./static/images/jdb.png" alt="" width=90% /></span></div>  
+          <div align="center"><img src="./static/images/flickr.png" alt="" width=90% /></span></div>
+          <p>
+            Caption: Scaling curves on JourneyDB and Flickr30k, we test our mode pre-trained from Laion subset on two more text-2-image datasets. The FID and validatin loss on two OOD dataset 
+            shows clear power-law relationship with compute budget.
+          </p>       
+        </div>
+          
+        <h3 class="title is-4" align="left">Exp. D: Image Samples with incresing compute</h3>
+        <div class="content has-text-justified">
+          <div align="center"><img src="./static/images/samples.jpg" alt="" width=90% /></span></div>  
+          <p>
+            Caption: We sample some images with our compute-optimal models. The image quality improves
+            with increasing compute budgets.
+          </p>        
+        </div>
+
+        <h3 class="title is-4" align="left">Exp. E: More Text-2-Image metrics</h3>
+        <div class="content has-text-justified">
+          <div align="center"><img src="./static/images/gen_eval.png" alt="" width=90% /></span></div>
+          <p>
+            Caption: We test other image-based metric (Gen Eval). We use our compute-optimal models to generate samples given the prompts and test its performance. The score also follows a power-law relationship.
+          </p>        
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
